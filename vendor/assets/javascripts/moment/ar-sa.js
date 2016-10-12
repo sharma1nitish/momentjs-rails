@@ -49,15 +49,15 @@
             LLL : 'D MMMM YYYY HH:mm',
             LLLL : 'dddd D MMMM YYYY HH:mm'
         },
-        meridiemParse: /ص|م/,
+        meridiemParse: /صباحًا|مساءً/,
         isPM : function (input) {
-            return 'م' === input;
+            return 'مساءً' === input;
         },
         meridiem : function (hour, minute, isLower) {
             if (hour < 12) {
-                return 'ص';
+                return 'صباحًا';
             } else {
-                return 'م';
+                return 'مساءً';
             }
         },
         calendar : {
